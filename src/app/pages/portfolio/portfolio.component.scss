@@ -1830,3 +1830,814 @@ body.animate-ready {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
+// Reemplazar la sección de media queries existente con esta versión mejorada:
+
+// Sistema de breakpoints completo
+// Responsive mejorado para todos los dispositivos
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  .profile-rings .ring {
+    &.ring-1 { width: 300px; height: 300px; }
+    &.ring-2 { width: 330px; height: 330px; }
+    &.ring-3 { width: 360px; height: 360px; }
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+  }
+  
+  .profile-placeholder {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .profile-rings .ring {
+    &.ring-1 { width: 290px; height: 290px; }
+    &.ring-2 { width: 320px; height: 320px; }
+    &.ring-3 { width: 350px; height: 350px; }
+  }
+  
+  .education-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-image {
+    order: -1;
+  }
+  
+  .about-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .profile-placeholder {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .profile-rings .ring {
+    &.ring-1 { width: 280px; height: 280px; }
+    &.ring-2 { width: 310px; height: 310px; }
+    &.ring-3 { width: 340px; height: 340px; }
+  }
+  
+  .section {
+    padding: 4rem 0;
+  }
+  
+  .nav-menu {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+    padding: 0 1.5rem;
+  }
+  
+  .nav-container {
+    padding: 0 1.5rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .hero-description {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-placeholder {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .profile-rings .ring {
+    &.ring-1 { width: 240px; height: 240px; }
+    &.ring-2 { width: 270px; height: 270px; }
+    &.ring-3 { width: 300px; height: 300px; }
+  }
+  
+  .section {
+    padding: 3.5rem 0;
+    min-height: auto;
+  }
+  
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  
+  .timeline-item .timeline-marker {
+    left: -1.5rem;
+  }
+  
+  .timeline-content {
+    padding: 1.5rem;
+  }
+  
+  .education-card,
+  .project-card {
+    padding: 1.5rem;
+  }
+  
+  .hero-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .social-links {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  .contact-item span {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+  
+  .education-card .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .nav-container {
+    padding: 0 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .profile-placeholder {
+    width: 180px;
+    height: 180px;
+    border-width: 2px;
+  }
+  
+  .profile-photo {
+    border-width: 2px;
+  }
+  
+  .profile-rings .ring {
+    border-width: 1px;
+    
+    &.ring-1 { width: 200px; height: 200px; }
+    &.ring-2 { width: 230px; height: 230px; }
+    &.ring-3 { width: 260px; height: 260px; }
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
+  
+  .timeline-content {
+    padding: 1.25rem;
+  }
+  
+  .timeline-content h3 {
+    font-size: 1.1rem;
+  }
+  
+  .timeline-content h4 {
+    font-size: 1rem;
+  }
+  
+  .timeline-content .period {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9rem;
+  }
+  
+  .education-card,
+  .project-card {
+    padding: 1.25rem;
+  }
+  
+  .education-card h3,
+  .project-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .education-card h4 {
+    font-size: 1rem;
+  }
+  
+  .education-card .period,
+  .project-card .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .education-card p,
+  .project-card p {
+    font-size: 0.9rem;
+  }
+  
+  .skill-tag {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .language-item {
+    padding: 0.8rem 1rem;
+  }
+  
+  .language-item .language-name {
+    font-size: 0.9rem;
+  }
+  
+  .language-item .language-level {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  .social-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .form-input {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .hero-description {
+    font-size: 0.85rem;
+  }
+  
+  .section-title {
+    font-size: 1.6rem;
+  }
+  
+  .profile-placeholder {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .profile-rings .ring {
+    &.ring-1 { width: 180px; height: 180px; }
+    &.ring-2 { width: 210px; height: 210px; }
+    &.ring-3 { width: 240px; height: 240px; }
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .timeline {
+    padding-left: 1.2rem;
+  }
+  
+  .timeline-item .timeline-marker {
+    width: 10px;
+    height: 10px;
+    left: -1.2rem;
+  }
+  
+  .timeline-content {
+    padding: 1rem;
+  }
+  
+  .education-card,
+  .project-card {
+    padding: 1rem;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .social-links {
+    flex-direction: column;
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .social-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+// Orientación landscape en móviles
+@media (max-height: 500px) and (orientation: landscape) {
+  .section {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+  
+  .hero-section {
+    margin-top: 60px;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    text-align: left;
+  }
+  
+  .hero-buttons {
+    justify-content: flex-start;
+  }
+  
+  .hero-image {
+    order: 0;
+  }
+  
+  .profile-placeholder {
+    width: 140px;
+    height: 140px;
+  }
+  
+  .profile-rings .ring {
+    &.ring-1 { width: 160px; height: 160px; }
+    &.ring-2 { width: 180px; height: 180px; }
+    &.ring-3 { width: 200px; height: 200px; }
+  }
+  
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+// Soporte para pantallas de alta densidad (Retina)
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .profile-photo {
+    box-shadow: 0 0 40px rgba(6, 182, 212, 0.6);
+  }
+  
+  .profile-rings .ring {
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+  }
+}
+
+// Soporte para pantallas grandes
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1400px;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.8rem;
+  }
+  
+  .hero-description {
+    font-size: 1.3rem;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+  
+  .profile-placeholder {
+    width: 350px;
+    height: 350px;
+  }
+  
+  .profile-rings .ring {
+    &.ring-1 { width: 370px; height: 370px; }
+    &.ring-2 { width: 400px; height: 400px; }
+    &.ring-3 { width: 430px; height: 430px; }
+  }
+}
+
+// Añadir soporte para navegación móvil
+.mobile-nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: $text_dark;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: linear-gradient(45deg, $primary-purple, $pink);
+    transition: all 0.3s ease;
+  }
+  
+  &.active {
+    .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    
+    .bar:nth-child(2) {
+      opacity: 0;
+    }
+    
+    .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(10, 10, 15, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  
+  &.active {
+    transform: translateX(0);
+  }
+  
+  .mobile-nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    
+    li {
+      margin: 1.5rem 0;
+    }
+    
+    .nav-link {
+      color: $text_dark;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      position: relative;
+      transition: all 0.3s ease;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(45deg, $primary-purple, $pink);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+      }
+      
+      &:hover, &.active {
+        color: $pink;
+        
+        &::after {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+  
+  .nav-container {
+    justify-content: center;
+  }
+}
+
+// Optimizaciones para dispositivos táctiles
+@media (hover: none) {
+  .btn:hover, 
+  .skill-tag:hover, 
+  .language-item:hover, 
+  .timeline-content:hover, 
+  .education-card:hover, 
+  .project-card:hover,
+  .contact-item:hover,
+  .social-btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .btn.btn-glow::before {
+    display: none;
+  }
+  
+  .btn-particles::before,
+  .btn-particles::after {
+    display: none;
+  }
+  
+  .card-glow {
+    display: none;
+  }
+  
+  .skill-glow {
+    display: none;
+  }
+  
+  .contact-glow {
+    display: none;
+  }
+  
+  .custom-cursor {
+    display: none;
+  }
+}
+
+// Mejoras de accesibilidad
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .profile-rings .ring {
+    animation: none !important;
+  }
+  
+  .bubble {
+    animation: none !important;
+    opacity: 0.05;
+  }
+  
+  .floating-particle {
+    animation: none !important;
+    opacity: 0.3;
+  }
+  
+  .cursor-blink {
+    animation: none !important;
+  }
+  
+  .title-word,
+  .subtitle-word {
+    animation: none !important;
+  }
+  
+  .hero-buttons,
+  .hero-image {
+    animation: none !important;
+  }
+  
+  .marker-pulse {
+    animation: none !important;
+  }
+  
+  .btn-particles::before,
+  .btn-particles::after {
+    animation: none !important;
+  }
+  
+  .scroll-indicator {
+    animation: none !important;
+  }
+}
+
+// Añadir estos estilos adicionales al final del archivo:
+
+// Estilos para dispositivos táctiles
+.touch-device {
+  .custom-cursor {
+    display: none;
+  }
+  
+  // Mejorar el tamaño de los elementos táctiles
+  .btn, .nav-link, .social-btn {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  // Evitar que el texto se desborde en dispositivos pequeños
+  .contact-item span {
+    word-break: break-word;
+  }
+}
+
+// Clase para bloquear el desplazamiento cuando el menú móvil está abierto
+body.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+// Mejoras de accesibilidad
+.btn:focus,
+.nav-link:focus,
+.social-btn:focus,
+.form-input:focus,
+.mobile-nav-toggle:focus {
+  outline: 2px solid $cyan;
+  outline-offset: 2px;
+}
+
+// Mejoras para lectores de pantalla
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+// Optimizaciones para impresión
+@media print {
+  .navbar,
+  .mobile-nav,
+  .mobile-nav-toggle,
+  .hero-buttons,
+  .scroll-indicator,
+  .contact-form,
+  .social-links,
+  .profile-rings,
+  .particles-container,
+  .bubble,
+  .floating-particle,
+  .custom-cursor {
+    display: none !important;
+  }
+  
+  .section {
+    padding: 1rem 0 !important;
+    min-height: auto !important;
+    page-break-inside: avoid;
+  }
+  
+  .hero-section {
+    margin-top: 0 !important;
+  }
+  
+  body, .portfolio-container {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .hero-title .title-word,
+  .hero-subtitle .subtitle-word,
+  .section-title .title-text,
+  h3, h4 {
+    color: black !important;
+    -webkit-text-fill-color: black !important;
+  }
+  
+  .card-glow,
+  .skill-glow,
+  .contact-glow,
+  .profile-glow {
+    display: none !important;
+  }
+  
+  .timeline::before,
+  .timeline-marker,
+  .education-card::before,
+  .project-card::before {
+    background: black !important;
+    box-shadow: none !important;
+  }
+  
+  .skill-tag,
+  .language-level,
+  .period {
+    background: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+    box-shadow: none !important;
+  }
+  
+  .footer {
+    border-top: 1px solid black !important;
+  }
+}
