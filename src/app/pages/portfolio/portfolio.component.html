@@ -1,0 +1,284 @@
+<div class="portfolio-container">
+  <!-- Partículas flotantes adicionales -->
+  <div class="particles-container"></div>
+
+  <!-- Cursor personalizado -->
+  <div class="custom-cursor">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+  </div>
+
+  <!-- Navegación fija mejorada -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <h2>{{ personalInfo.name }}</h2>
+        <div class="logo-glow"></div>
+      </div>
+      <ul class="nav-menu">
+        <li><a (click)="scrollToSection('home')" class="nav-link" [class.active]="currentSection === 'home'">
+          <span>Inicio</span>
+          <div class="nav-indicator"></div>
+        </a></li>
+        <li><a (click)="scrollToSection('about')" class="nav-link" [class.active]="currentSection === 'about'">
+          <span>Sobre Mí</span>
+          <div class="nav-indicator"></div>
+        </a></li>
+        <li><a (click)="scrollToSection('experience')" class="nav-link" [class.active]="currentSection === 'experience'">
+          <span>Experiencia</span>
+          <div class="nav-indicator"></div>
+        </a></li>
+        <li><a (click)="scrollToSection('education')" class="nav-link" [class.active]="currentSection === 'education'">
+          <span>Estudios</span>
+          <div class="nav-indicator"></div>
+        </a></li>
+        <li><a (click)="scrollToSection('projects')" class="nav-link" [class.active]="currentSection === 'projects'">
+          <span>Proyectos</span>
+          <div class="nav-indicator"></div>
+        </a></li>
+        <li><a (click)="scrollToSection('contact')" class="nav-link" [class.active]="currentSection === 'contact'">
+          <span>Contacto</span>
+          <div class="nav-indicator"></div>
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sección Inicio mejorada -->
+  <section id="home" class="section hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title" #heroTitle>
+          <span class="title-word">{{ personalInfo.name }}</span>
+        </h1>
+        <h2 class="hero-subtitle">
+          <span class="subtitle-word">{{ personalInfo.title }}</span>
+        </h2>
+        <p class="hero-description typing-text">
+          {{ typedText }}<span class="cursor-blink">|</span>
+        </p>
+        <div class="hero-buttons">
+          <button (click)="scrollToSection('projects')" class="btn btn-primary btn-glow">
+            <span>Ver Proyectos</span>
+            <div class="btn-particles"></div>
+          </button>
+          <button (click)="scrollToSection('contact')" class="btn btn-secondary btn-glow">
+            <span>Contactar</span>
+            <div class="btn-particles"></div>
+          </button>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-placeholder">
+          <img src="assets/img/Captura.jpg" alt="Foto de perfil" class="profile-photo" />
+          <div class="profile-glow"></div>
+          <div class="profile-rings">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="ring ring-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Sección Sobre Mí mejorada -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-text">Sobre Mí</span>
+        <div class="title-decoration"></div>
+      </h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="text-reveal">{{ aboutMe }}</p>
+        </div>
+        <div class="skills-languages-container">
+          <div class="skills-container">
+            <h3>Habilidades Técnicas</h3>
+            <div class="skills-grid" (mouseenter)="animateSkills()">
+              <span *ngFor="let skill of skills; let i = index" 
+                    class="skill-tag" 
+                    [style.animation-delay]="i * 0.1 + 's'">
+                {{ skill }}
+                <div class="skill-glow"></div>
+              </span>
+            </div>
+          </div>
+          
+          <div class="languages-container">
+            <h3>Idiomas</h3>
+            <div class="languages-grid">
+              <div *ngFor="let language of languages; let i = index" 
+                   class="language-item"
+                   [style.animation-delay]="i * 0.15 + 's'">
+                <span class="language-name">{{ language.name }}</span>
+                <span class="language-level">{{ language.level }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Experiencia mejorada -->
+  <section id="experience" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-text">Experiencia Profesional</span>
+        <div class="title-decoration"></div>
+      </h2>
+      <div class="timeline">
+        <div *ngFor="let exp of experience; let i = index" 
+             class="timeline-item"
+             (mouseenter)="onCardHover($event, true)"
+             (mouseleave)="onCardHover($event, false)">
+          <div class="timeline-marker">
+            <div class="marker-pulse"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="card-glow"></div>
+            <h3>{{ exp.position }}</h3>
+            <h4>{{ exp.company }}</h4>
+            <span class="period">{{ exp.period }}</span>
+            <p>{{ exp.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Estudios mejorada -->
+  <section id="education" class="section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-text">Formación Académica</span>
+        <div class="title-decoration"></div>
+      </h2>
+      <div class="education-grid">
+        <div *ngFor="let edu of education" 
+             class="education-card"
+             (mouseenter)="onCardHover($event, true)"
+             (mouseleave)="onCardHover($event, false)">
+          <div class="card-glow"></div>
+          <div class="card-header">
+            <h3>{{ edu.degree }}</h3>
+            <div class="period">{{ edu.period }}</div>
+          </div>
+          <h4>{{ edu.institution }}</h4>
+          <p>{{ edu.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Proyectos mejorada -->
+  <section id="projects" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-text">Mis Proyectos</span>
+        <div class="title-decoration"></div>
+      </h2>
+      <div class="projects-grid">
+        <div *ngFor="let project of projects" 
+             class="project-card"
+             (mouseenter)="onCardHover($event, true)"
+             (mouseleave)="onCardHover($event, false)">
+          <div class="card-glow"></div>
+          <div class="project-content">
+            <h3>{{ project.name }}</h3>
+            <p>{{ project.description }}</p>
+            <div class="tech-stack">
+              <span *ngFor="let tech of project.technologies" class="tech-tag">
+                {{ tech }}
+              </span>
+            </div>
+            <button (click)="openLink(project.link)" class="btn btn-outline btn-glow">
+              <span>Ver Proyecto</span>
+              <div class="btn-particles"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección Contacto mejorada -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-text">Contacto</span>
+        <div class="title-decoration"></div>
+      </h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>¡Hablemos!</h3>
+          <p>Estoy disponible para nuevos proyectos y oportunidades</p>
+          
+          <div class="contact-item">
+            <i class="icon-mail"></i>
+            <span>{{ personalInfo.email }}</span>
+            <div class="contact-glow"></div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="icon-phone"></i>
+            <span>{{ personalInfo.phone }}</span>
+            <div class="contact-glow"></div>
+          </div>
+          
+          <div class="contact-item">
+            <i class="icon-location"></i>
+            <span>{{ personalInfo.location }}</span>
+            <div class="contact-glow"></div>
+          </div>
+          
+          <div class="social-links">
+            <button (click)="openLink(personalInfo.linkedin)" class="social-btn btn-glow">
+              <span>LinkedIn</span>
+              <div class="btn-particles"></div>
+            </button>
+            <button (click)="openLink(personalInfo.github)" class="social-btn btn-glow">
+              <span>GitHub</span>
+              <div class="btn-particles"></div>
+            </button>
+          </div>
+        </div>
+        
+        <div class="contact-form">
+          <h3>Envíame un mensaje</h3>
+          <form class="form">
+            <div class="form-group">
+              <input type="text" placeholder="Tu nombre" class="form-input">
+              <div class="input-glow"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Tu email" class="form-input">
+              <div class="input-glow"></div>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="Tu mensaje" rows="5" class="form-input"></textarea>
+              <div class="input-glow"></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-glow">
+              <span>Enviar Mensaje</span>
+              <div class="btn-particles"></div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer mejorado -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 {{ personalInfo.name }}. </p>
+      <div class="footer-glow"></div>
+    </div>
+  </footer>
+</div>
